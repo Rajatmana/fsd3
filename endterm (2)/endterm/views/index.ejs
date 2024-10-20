@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+
+      <%if(user){%>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>username</th>
+                    <th>function</th>
+                </tr>
+            </thead>
+            <tbody>
+               <% user.forEach((v)=>{ %>
+                    <tr>
+                        <td>
+                            <%=v.username%>
+                        </td>
+                        <td>
+                            <a href="/delete-user/<%=v._id%>">delete</a>
+                        </td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+      <%}%>
+</body>
+
+</html>
